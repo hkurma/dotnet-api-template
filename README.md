@@ -28,7 +28,7 @@ tests/
 - **FluentValidation** - Input validation
 - **AutoMapper** - Object-to-object mapping
 - **Global Exception Handling** - Centralized error handling
-- **Swagger/OpenAPI** - API documentation
+- **OpenAPI** - Built-in API documentation with Scalar UI
 - **Entity Framework Core** - ORM with In-Memory database
 - **CORS Support** - Cross-origin resource sharing
 - **Structured Logging** - Built-in logging configuration
@@ -62,11 +62,12 @@ tests/
    - Open the project in VS Code
    - Press `F5` or go to Run and Debug
    - Select "Launch API" configuration
-   - Swagger UI will automatically open at `https://localhost:5001`
+   - Scalar API documentation will automatically open at `https://localhost:5001`
 
 5. **Access the API**
-   - Swagger UI: `https://localhost:5001` (Development)
-   - API Base URL: `https://localhost:5001/api`
+   - **F5 Debug**: Scalar at `https://localhost:5001/scalar/v1` (with debugging)
+   - **Run Task**: Scalar at `http://localhost:5000/scalar/v1` (without debugging)
+   - **API Base URL**: `http://localhost:5000/api` or `https://localhost:5001/api`
 
 ## 🗄️ Database Configuration
 
@@ -94,7 +95,7 @@ The project includes complete VS Code configuration for optimal development expe
 ### 🚀 Debugging Configuration
 
 - **Launch API**: Press `F5` to start debugging in development mode
-- **Auto-open Swagger**: Swagger UI opens automatically at `https://localhost:5001`
+- **Auto-open Scalar**: Scalar API documentation opens automatically at `https://localhost:5001`
 - **Breakpoint Support**: Set breakpoints anywhere in the codebase
 
 ### 🛠️ Editor Settings
@@ -118,7 +119,7 @@ VS Code will automatically suggest installing:
 1. Open project in VS Code: `code .`
 2. Install recommended extensions (VS Code will prompt)
 3. Press `F5` to start debugging
-4. Swagger UI opens automatically - start testing your API!
+4. Scalar API documentation opens automatically - start testing your API!
 
 ### 🎨 Code Formatting
 
@@ -143,6 +144,20 @@ Run tests easily from VS Code or command line:
 dotnet test
 
 # VS Code: Ctrl+Shift+P → "Tasks: Run Task" → "test"
+```
+
+### 🚀 Running the Application
+
+Start the API from VS Code or command line:
+
+```bash
+# Run the API
+dotnet run --project src/DotNet.Template.Api
+
+# Run on specific port
+dotnet run --project src/DotNet.Template.Api --urls "http://localhost:5000"
+
+# VS Code: Ctrl+Shift+P → "Tasks: Run Task" → "run" (runs on localhost:5000)
 ```
 
 ## 🔧 Configuration
