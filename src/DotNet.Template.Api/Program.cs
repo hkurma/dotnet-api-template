@@ -2,6 +2,7 @@ using DotNet.Template.Api.Middleware;
 using DotNet.Template.Application;
 using DotNet.Template.Infrastructure;
 using Scalar.AspNetCore;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +25,9 @@ builder.Services.AddCors(options =>
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure();
 
+// Add Health Checks
+builder.Services.AddHealthChecks();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline
@@ -34,6 +38,9 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
     app.MapScalarApiReference();
 }
+
+// Map Health Check endpoints
+app.MapHealthChecks("/healthz");
 
 app.UseHttpsRedirection();
 app.UseCors("AllowAll");

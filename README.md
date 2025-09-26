@@ -68,6 +68,28 @@ tests/
    - **F5 Debug**: Scalar at `https://localhost:5001/scalar/v1` (with debugging)
    - **Run Task**: Scalar at `http://localhost:5000/scalar/v1` (without debugging)
    - **API Base URL**: `http://localhost:5000/api` or `https://localhost:5001/api`
+   - **Health Checks**: `http://localhost:5000/healthz` or `https://localhost:5001/healthz`
+
+## 🏥 Health Checks
+
+The API includes a simple health monitoring endpoint:
+
+### Health Check Endpoint
+
+- **`/healthz`** - Basic health status check
+
+### Health Check Features
+
+- **Simple Check**: Basic API health verification
+- **JSON Response**: Machine-readable health status
+- **Standard Convention**: Uses `/healthz` endpoint (common in Kubernetes and cloud platforms)
+
+### Usage Examples
+
+```bash
+# Check API health
+curl http://localhost:5000/healthz
+```
 
 ## 🗄️ Database Configuration
 
