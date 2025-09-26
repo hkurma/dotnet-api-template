@@ -112,7 +112,6 @@ VS Code will automatically suggest installing:
 
 - **C# Dev Kit**: Complete C# development experience
 - **JSON**: Enhanced JSON editing
-- **Auto Rename Tag**: Automatically rename paired tags (useful for XML docs)
 
 ### 🎯 Quick Start
 

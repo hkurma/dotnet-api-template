@@ -2,7 +2,6 @@
   "recommendations": [
     "ms-dotnettools.csharp",
     "ms-dotnettools.csdevkit",
-    "ms-vscode.vscode-json",
-    "formulahendry.auto-rename-tag"
+    "ms-vscode.vscode-json"
   ]
 }
